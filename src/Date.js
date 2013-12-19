@@ -1288,7 +1288,7 @@
 	// add $D shortcut to window or module.exports
 	if (typeof module != 'undefined' && module.exports) {
 		module.exports = Date.create;
-	}else if(typeof define === 'function'){
+	}else if(typeof define === 'function' && define.amd){
 		define(function(){
 			return Date.create;
 		})
